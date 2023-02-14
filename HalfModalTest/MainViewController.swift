@@ -30,7 +30,9 @@ class MainViewController: UIViewController {
         present(modalVC, animated: true, completion: nil)
         
         if let sheet = modalVC.sheetPresentationController {
+            // large()、medium()、small()で指定できる
             sheet.detents = [.medium()]
+            
             sheet.largestUndimmedDetentIdentifier = .medium
         }
     }
