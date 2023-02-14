@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    
     }
     
     @objc func showModal() {
@@ -30,12 +31,18 @@ class MainViewController: UIViewController {
         present(modalVC, animated: true, completion: nil)
         
         if let sheet = modalVC.sheetPresentationController {
-            // large()、medium()、small()で指定できる
+            // large()、medium()で指定できる
             sheet.detents = [.medium()]
-            
+            // モーダルの角丸を設定
+            sheet.preferredCornerRadius = 16.0
+            // グラバーを表示する
+            sheet.prefersGrabberVisible = true
+            // 呼び出し元のViewControllerの暗さを設定
             sheet.largestUndimmedDetentIdentifier = .medium
         }
+        
     }
+ 
 }
 
 
