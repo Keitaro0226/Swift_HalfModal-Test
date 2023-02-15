@@ -9,7 +9,7 @@ iOS15以降から実装されたUISheetPresentationControllerを使用してハ�
 - MacOS Monterey（12.6.3）
 
 ## 使い方
-「ShowModal」ボタン押下するとハーフモーダルが表示される
+「Show Modal」ボタンを押下するとハーフモーダルが表示される
 
 ## ハーフモーダルのカスタマイズ
 
